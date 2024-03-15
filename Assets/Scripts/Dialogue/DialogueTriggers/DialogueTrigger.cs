@@ -10,6 +10,6 @@ public class DialogueTrigger : MonoBehaviour
     {
         _dialogueController = GetComponent<DialogueController>();
 
-        //_dialogueController.EnterDialogueMode(_inkJSON);
+        _dialogueController.EnterDialogueMode(_inkJSON);
     }
 }

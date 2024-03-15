@@ -33,7 +33,7 @@ public class DialogueController : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.touchCount > 0)
         {
             ContinueStory();
         }

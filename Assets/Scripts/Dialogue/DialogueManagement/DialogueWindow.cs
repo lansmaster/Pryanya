@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class DialogueWindow : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _displayName;
-    [SerializeField] private Image _textWindow; 
+    [SerializeField] private GameObject _textWindow; 
     [SerializeField] private TextMeshProUGUI _displayText;
 
     [SerializeField] private GameObject _dialogueWindow;
@@ -76,7 +76,7 @@ public class DialogueWindow : MonoBehaviour
     public void ClearText()
     {
         SetText("");
-        _textWindow.enabled = true;
+        _textWindow.SetActive(true);
     }
 
     public void SetName(string namePerson)
@@ -141,7 +141,7 @@ public class DialogueWindow : MonoBehaviour
         IsStatusAnswer = _dialogueChoice.DisplayChoices(story);
         if (IsStatusAnswer == true)
         {
-            _textWindow.enabled = false;
+            _textWindow.SetActive(false);
         }
     }
 }
