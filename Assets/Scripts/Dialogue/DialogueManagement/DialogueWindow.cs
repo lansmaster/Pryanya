@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 [RequireComponent(typeof(DialogueChoice))]
 public class DialogueWindow : MonoBehaviour
@@ -21,6 +20,8 @@ public class DialogueWindow : MonoBehaviour
     public bool IsStatusAnswer { get; private set; }
     public bool IsPlaying { get; private set; }
     public bool CanContinueToNextLine { get; private set; }
+
+    public static event Action<string> OnDispayLine;
 
     public float CoolDownNewLettew
     {
@@ -102,6 +103,8 @@ public class DialogueWindow : MonoBehaviour
     public IEnumerator DisplayLine(Story story)
     {
         string line = story.Continue();
+
+        OnDispayLine?.Invoke(line);
 
         ClearText();
 
