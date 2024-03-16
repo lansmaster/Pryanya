@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using System.Collections;
 using System.IO;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -15,7 +13,12 @@ public class SoundSynthesis : MonoBehaviour
 
     private const string _iamToken = "t1.9euelZrLnseWk82WlJCZnYuUlcmcm-3rnpWak4uUxpuPl53Lx4-ejpiMmpPl8_drVipQ-e9UEUkP_d3z9ysFKFD571QRSQ_9zef1656VmpPMxpaTlomOys6KyYqLm5ue7_zF656VmpPMxpaTlomOys6KyYqLm5ue.v16FxA6doSlsfZS0N28e4pgwHBAVTLOYuWkUL4AIqFyR2VfzcXPYJk-bRdUsJ1EZx6DD6_uJMRaqV5vVbWumAg";
     private const string _folderId = "b1g89ongs1c7kp1112oc";
-    private static string _filePath = Path.Combine(UnityEngine.Application.streamingAssetsPath, "speech.mp3");
+
+#if UNITY_EDITOR
+    private static string _filePath = Path.Combine(Application.streamingAssetsPath, "speech.mp3");
+#elif UNITY_ANDROID
+    private static string _filePath = Application.persistentDataPath + "/speech.mp3";
+#endif
 
     private void Awake()
     {
@@ -28,10 +31,10 @@ public class SoundSynthesis : MonoBehaviour
 
     private static void Synthesis(string text)
     {
-        _ = Tts(text);
+        _ = TextToSpeechRequest(text);
     }
 
-    private static async Task Tts(string text)
+    private static async Task TextToSpeechRequest(string text)
     {
         var values = new Dictionary<string, string>
         {
