@@ -3279,7 +3279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &93838743
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7787,6 +7787,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _linkButton: {fileID: 459345246}
+  _characterSpriteRenderer: {fileID: 1949721981}
+  _1_1: {fileID: 21300000, guid: c65adcb8c0219b940b27df30f813c597, type: 3}
+  _1_2: {fileID: 21300000, guid: 034f1500c1359b9438199fe65d041749, type: 3}
+  _2_1: {fileID: 21300000, guid: a657af63de8d12143877022b9dc34a13, type: 3}
+  _2_2: {fileID: 21300000, guid: 7264bb67a5ee6514a8516aaa22db3e50, type: 3}
+  _3_1: {fileID: 21300000, guid: 89529ceed6a633c438e718097a86de6e, type: 3}
 --- !u!114 &773056699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34950,7 +34956,7 @@ GameObject:
   - component: {fileID: 1949721982}
   - component: {fileID: 1949721981}
   m_Layer: 0
-  m_Name: photo_2024-03-16_19-42-04
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34997,7 +35003,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c65adcb8c0219b940b27df30f813c597, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 034f1500c1359b9438199fe65d041749, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35017,7 +35023,7 @@ Transform:
   m_GameObject: {fileID: 1949721980}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.20413592, z: -0, w: 0.9789426}
-  m_LocalPosition: {x: 0, y: 1.3000001, z: 0}
+  m_LocalPosition: {x: 0.035, y: 1.385, z: -0.015}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []

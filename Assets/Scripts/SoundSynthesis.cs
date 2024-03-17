@@ -11,7 +11,7 @@ public class SoundSynthesis : MonoBehaviour
     private static HttpClient httpClient = new HttpClient();
     private static AudioSource _audioSource;
 
-    private const string _iamToken = "t1.9euelZqZi8jNmc2QlMqNmJPNkpzKme3rnpWak4uUxpuPl53Lx4-ejpiMmpPl9Pc3SSdQ-e8Cek3S3fT3d3ckUPnvAnpN0s3n9euelZqWisaTysuVzZSam8abnZeXjO_8xeuelZqWisaTysuVzZSam8abnZeXjA.qIEKQFx7PqwHTgwbWId_K-LKTC31jZIy4JU4oTpoJKxR32RBnH1SjRtecZwOme-d6lzsa72aB77aTOhfNncYDA";
+    private const string _iamToken = "t1.9euelZqbzpePkcaNnImPyMuUipfMje3rnpWak4uUxpuPl53Lx4-ejpiMmpPl8_dEOSVQ-e9mfRcG_d3z9wRoIlD572Z9Fwb9zef1656VmpqZzJ2XjcuWjJOTjs2JncuY7_zF656VmpqZzJ2XjcuWjJOTjs2JncuY.6UO_0mPjFXxoW8J-pjg_kbzUFfe5omcbSxZaDeV5URJ5F1Cl0VKBbh41E1fAVWIVahLV9HSWq4UBg2M3kE9UDg";
     private const string _folderId = "b1g89ongs1c7kp1112oc";
 
 #if UNITY_EDITOR
