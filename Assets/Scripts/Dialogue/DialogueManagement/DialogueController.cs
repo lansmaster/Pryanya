@@ -2,10 +2,13 @@ using Ink.Runtime;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(DialogueWindow)), RequireComponent(typeof(DialogueTag))]
 public class DialogueController : MonoBehaviour
 {
+    [SerializeField] private Button nextButton;
+
     private DialogueWindow _dialogueWindow;
     private DialogueTag _dialogueTag;
 
@@ -24,19 +27,19 @@ public class DialogueController : MonoBehaviour
     private void Start()
     {
         _dialogueWindow.SetActive(false);
+
+        nextButton.onClick.AddListener(ContinueStory);
     }
 
     private void Update()
     {
         if (_dialogueWindow.IsStatusAnswer == true || _dialogueWindow.IsPlaying == false || _dialogueWindow.CanContinueToNextLine == false)
         {
+            nextButton.gameObject.SetActive(false);
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.touchCount > 0)
-        {
-            ContinueStory();
-        }
+        nextButton.gameObject.SetActive(true);
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)

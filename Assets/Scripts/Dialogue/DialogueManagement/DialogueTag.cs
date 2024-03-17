@@ -21,7 +21,7 @@ public class DialogueTag : MonoBehaviour
 
         foreach (string tagValue in tags)
         {
-            string[] keyTag = tagValue.Split(":");
+            string[] keyTag = tagValue.Split(": ");
 
             if (keyTag.Length != 2)
             {

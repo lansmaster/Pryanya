@@ -11,7 +11,7 @@ public class SoundSynthesis : MonoBehaviour
     private static HttpClient httpClient = new HttpClient();
     private static AudioSource _audioSource;
 
-    private const string _iamToken = "t1.9euelZrLnseWk82WlJCZnYuUlcmcm-3rnpWak4uUxpuPl53Lx4-ejpiMmpPl8_drVipQ-e9UEUkP_d3z9ysFKFD571QRSQ_9zef1656VmpPMxpaTlomOys6KyYqLm5ue7_zF656VmpPMxpaTlomOys6KyYqLm5ue.v16FxA6doSlsfZS0N28e4pgwHBAVTLOYuWkUL4AIqFyR2VfzcXPYJk-bRdUsJ1EZx6DD6_uJMRaqV5vVbWumAg";
+    private const string _iamToken = "t1.9euelZqZi8jNmc2QlMqNmJPNkpzKme3rnpWak4uUxpuPl53Lx4-ejpiMmpPl9Pc3SSdQ-e8Cek3S3fT3d3ckUPnvAnpN0s3n9euelZqWisaTysuVzZSam8abnZeXjO_8xeuelZqWisaTysuVzZSam8abnZeXjA.qIEKQFx7PqwHTgwbWId_K-LKTC31jZIy4JU4oTpoJKxR32RBnH1SjRtecZwOme-d6lzsa72aB77aTOhfNncYDA";
     private const string _folderId = "b1g89ongs1c7kp1112oc";
 
 #if UNITY_EDITOR
@@ -61,7 +61,8 @@ public class SoundSynthesis : MonoBehaviour
     private static async Task<AudioClip> LoadClip(string path)
     {
         AudioClip clip = null;
-        using (UnityWebRequest uwr = UnityWebRequestMultimedia.GetAudioClip(path, AudioType.MPEG))
+        UriBuilder uriBuilder = new UriBuilder(path);
+        using (UnityWebRequest uwr = UnityWebRequestMultimedia.GetAudioClip(uriBuilder.Uri, AudioType.MPEG))
         {
             uwr.SendWebRequest();
 

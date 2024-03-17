@@ -11,6 +11,7 @@ public class Tags : MonoBehaviour
         _map.Add("speaker", GetComponent<SpeakerTag>());
         _map.Add("method", GetComponent<MethodTag>());
         _map.Add("cooldown", GetComponent<CooldownTag>());
+        _map.Add("methodParameters", GetComponent<MethodParametersTag>());
     }
 
     public ITag GetValue(string key)
