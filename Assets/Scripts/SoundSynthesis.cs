@@ -11,8 +11,8 @@ public class SoundSynthesis : MonoBehaviour
     private static HttpClient httpClient = new HttpClient();
     private static AudioSource _audioSource;
 
-    private const string _iamToken = "t1.9euelZqbzpePkcaNnImPyMuUipfMje3rnpWak4uUxpuPl53Lx4-ejpiMmpPl8_dEOSVQ-e9mfRcG_d3z9wRoIlD572Z9Fwb9zef1656VmpqZzJ2XjcuWjJOTjs2JncuY7_zF656VmpqZzJ2XjcuWjJOTjs2JncuY.6UO_0mPjFXxoW8J-pjg_kbzUFfe5omcbSxZaDeV5URJ5F1Cl0VKBbh41E1fAVWIVahLV9HSWq4UBg2M3kE9UDg";
-    private const string _folderId = "b1g89ongs1c7kp1112oc";
+    private const string _iamToken = "123";
+    private const string _folderId = "123";
 
 #if UNITY_EDITOR
     private static string _filePath = Path.Combine(Application.streamingAssetsPath, "speech.mp3");
